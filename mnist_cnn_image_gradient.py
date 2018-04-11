@@ -107,6 +107,8 @@ def max_pool_2x2(x):
   return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
                         strides=[1, 2, 2, 1], padding='SAME')
 
+def image_gradient(x):
+    
 
 def weight_variable(shape):
   """weight_variable generates a weight variable of a given shape."""

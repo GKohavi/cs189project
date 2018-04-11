@@ -147,10 +147,10 @@ def main(_):
   accuracy = tf.reduce_mean(correct_prediction)
 
   model_saver = tf.train.Saver()
-  load_model = False
+  load_model = True
   if load_model:
       with tf.Session() as sess:
-        model_saver.restore(sess, "saved_models/model.ckpt")
+        model_saver.restore(sess, "saved_models/baseline/baseline.ckpt")
         # for i in range(50):
         #   batch = mnist.train.next_batch(50)
         #   if i % 100 == 0:
