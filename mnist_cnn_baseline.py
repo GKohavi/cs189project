@@ -147,7 +147,7 @@ def main(_):
   accuracy = tf.reduce_mean(correct_prediction)
 
   model_saver = tf.train.Saver()
-  load_model = True
+  load_model = False
   if load_model:
       with tf.Session() as sess:
         model_saver.restore(sess, "saved_models/model.ckpt")
@@ -163,7 +163,7 @@ def main(_):
   else:
     with tf.Session() as sess:
       sess.run(tf.global_variables_initializer())
-      for i in range(1000):
+      for i in range(3000):
         batch = mnist.train.next_batch(50)
         if i % 100 == 0:
           train_accuracy = accuracy.eval(feed_dict={
@@ -173,7 +173,7 @@ def main(_):
       print('test accuracy %g' % accuracy.eval(feed_dict={
           x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
       # Train the model and save it in the end
-      model_saver.save(sess, "saved_models/model.ckpt")
+      model_saver.save(sess, "saved_models/baseline/baseline.ckpt")
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
