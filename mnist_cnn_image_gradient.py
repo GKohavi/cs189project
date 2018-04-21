@@ -101,14 +101,29 @@ def conv2d(x, W):
   """conv2d returns a 2d convolution layer with full stride."""
   return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
+def unravel_argmax(argmax, shape):
+    output_list = []
+    output_list.append(argmax // (shape[2] * shape[3]))
+    output_list.append(argmax % (shape[2] * shape[3]) // shape[3])
+    return tf.stack(output_list)
 
 def max_pool_2x2(x):
   """max_pool_2x2 downsamples a feature map by 2X."""
-  return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
-                        strides=[1, 2, 2, 1], padding='SAME')
-
-def image_gradient(x):
-    
+  output, arg_max = tf.nn.max_pool_with_argmax(input=x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
+  # shape = x.get_shape()
+  # arg_max = tf.cast(arg_max, tf.int32)
+  # unraveld = unravel_argmax(arg_max, shape)
+  # indices = tf.transpose(unraveld, (1, 2, 3, 4, 0))
+  # channels = shape[-1]
+  # bs = tf.shape(iv.m)[0]
+  # t1 = tf.range(channels, dtype=arg_max.dtype)[None, None, None, :, None]
+  # t2 = tf.tile(t1, multiples=(bs,) + tuple(indices.get_shape()[1:-2]) + (1, 1))
+  # t3 = tf.concat((indices, t2), axis=-1)
+  # t4 = tf.range(tf.cast(bs, dtype=arg_max.dtype))
+  # t5 = tf.tile(t4[:, None, None, None, None], (1,) + tuple(indices.get_shape()[1:-2].as_list()) + (channels, 1))
+  # t6 = tf.concat((t5, t3), -1)
+  # return tf.gather_nd(input, t6)
+  return output
 
 def weight_variable(shape):
   """weight_variable generates a weight variable of a given shape."""

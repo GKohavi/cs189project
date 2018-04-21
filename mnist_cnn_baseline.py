@@ -147,7 +147,7 @@ def main(_):
   accuracy = tf.reduce_mean(correct_prediction)
 
   model_saver = tf.train.Saver()
-  load_model = True
+  load_model = False
   if load_model:
       with tf.Session() as sess:
         model_saver.restore(sess, "saved_models/baseline/baseline.ckpt")
