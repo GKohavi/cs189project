@@ -1,2 +1,7 @@
 task1data/
 task2data/
+data/
+X.npy
+Y.npy
+X_abvalues.npy
+
