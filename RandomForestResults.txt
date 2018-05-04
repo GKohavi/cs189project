@@ -1,0 +1,22 @@
+n_est: 15, percent_train: 10, train_err: 0.0007213232256967223, test_err: 0.036154238647131715, image_test_err: 0.02606201171875, runtime: 14.02831220626831
+n_est: 15, percent_train: 10, train_err: 0.8962832881304456, test_err: 0.037020585805573776, image_test_err: 0.025665283203125, runtime: 13.36660122871399
+n_est: 15, percent_train: 10, gen_acc: 0.8693958396615917, test_acc: 0.9723490232524237, image_test_acc: 0.9634602864583334, runtime: 20.909613847732544
+n_est: 15, percent_train: 10, gen_acc: 0.8696726712360403, test_acc: 0.9723102995845179, image_test_acc: 0.963897705078125, runtime: 20.374190092086792
+
+n_est: 15, percent_train: 10, percent_test: 20, gen_acc: 0.8690544724459759, test_acc: 0.9720240481570571, image_test_acc: 0.96295166015625, runtime: 20.58073925971985
+n_est: 15, percent_train: 40, percent_test: 20, gen_acc: 0.9017201235540924, test_acc: 0.9792205760866924, image_test_acc: 0.9717203776041666, runtime: 100.56848740577698
+n_est: 15, percent_train: 60, percent_test: 20, gen_acc: 0.9112775531277924, test_acc: 0.9810937386106859, image_test_acc: 0.9730631510416666, runtime: 160.49398016929626
+n_est: 50, percent_train: 10, percent_test: 20, gen_acc: 0.891822013819261, test_acc: 0.9733505236047331, image_test_acc: 0.964996337890625, runtime: 74.1209967136383
+n_est: 50, percent_train: 40, percent_test: 20, gen_acc: 0.9186470964235821, test_acc: 0.9796776672255023, image_test_acc: 0.9724629720052084, runtime: 341.70121812820435
+n_est: 50, percent_train: 60, percent_test: 20, gen_acc: 0.9262197645292027, test_acc: 0.9819122506499502, image_test_acc: 0.9732157389322916, runtime: 539.9202973842621
+n_est: 125, percent_train: 10, percent_test: 20, gen_acc: 0.8963925604135147, test_acc: 0.9734887139490245, image_test_acc: 0.9652099609375, runtime: 202.09404349327087
+n_est: 125, percent_train: 40, percent_test: 20, gen_acc: 0.9211372296995006, test_acc: 0.9802980051996015, image_test_acc: 0.972412109375, runtime: 864.740261554718
+n_est: 125, percent_train: 60, percent_test: 20, gen_acc: 0.9285360519348619, test_acc: 0.9820474038438176, image_test_acc: 0.9737141927083334, runtime: 1355.727635383606
+n_est: 200, percent_train: 10, percent_test: 20, gen_acc: 0.8971118411796128, test_acc: 0.9739321379109265, image_test_acc: 0.9662272135416666, runtime: 293.8229351043701
+n_est: 200, percent_train: 40, percent_test: 20, gen_acc: 0.922676242421206, test_acc: 0.9804331583934689, image_test_acc: 0.9725850423177084, runtime: 1300.83633518219
+n_est: 200, percent_train: 60, percent_test: 20, gen_acc: 0.9291069353271061, test_acc: 0.981947177879826, image_test_acc: 0.9732666015625, runtime: 2002.0062172412872
+
+
+658512
+2634048
+3951072
